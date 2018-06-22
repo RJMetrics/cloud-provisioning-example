@@ -138,6 +138,7 @@ const requestCreateConnection = function(job) {
 const waitForReady = function(job) {
   var deferred = Q.defer()
   const checkReady = function() {
+    console.log("If this is for someone else just type READY, otherwise")
     var ready = readline.question("Type READY and it hit Enter when you received welcome email for Client "+ job.config.newUser.companyName +" ("+ job.signupsPollRequestBody.client_id +"):\n")
     if(ready == 'READY') {
       deferred.resolve(job)
