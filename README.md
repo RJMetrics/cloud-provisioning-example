@@ -7,6 +7,7 @@ Example script for provisioning new MBI clients via the API
 Tested with:
 
 Node v7.2.0
+
 npm  3.10.9
 
 ```
