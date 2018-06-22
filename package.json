@@ -1,0 +1,19 @@
+{
+  "name": "cloud-onboarding-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "help": "node scripts -h",
+    "vm": "node scripts",
+    "prod": "node scripts -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "q": "^1.5.1",
+    "readline-sync": "^1.4.9",
+    "request": "^2.87.0"
+  }
+}
