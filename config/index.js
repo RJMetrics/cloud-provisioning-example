@@ -5,6 +5,7 @@ var connectionName
 var adminEmail
 var apiHost
 var dashboardHost
+var oauthClientId
 
 commander.arguments('<newUserEmail> <companyName> <adminEmail>')
   .option('-p, --prod')
@@ -57,10 +58,12 @@ if(commander.prod) {
   console.log("running production")
   apiHost = "https://api.rjmetrics.com"
   dashboardHost = "https://dashboard.rjmetrics.com"
+  oauthClientId = 18
 } else {
   console.log("running vm")
   apiHost = 'http://api.localhost.test:5000',
   dashboardHost = 'http://dashboard.localhost.test:5000'
+  oauthClientId = 16
 }
 
 const config = {
@@ -75,7 +78,8 @@ const config = {
   dashboard: dashboardHost,
   clientSecret: clientSecret,
   adminPassword: adminPassword,
-  adminEmail: adminEmail
+  adminEmail: adminEmail,
+  oauthClientId: oauthClientId
 };
 
 

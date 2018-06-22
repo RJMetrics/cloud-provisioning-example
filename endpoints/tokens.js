@@ -11,7 +11,7 @@ const requestOptions = function(job) {
       scope: 'default',
       username: job.config.adminEmail,
       grant_type: 'password',
-      clientId: 18,
+      clientId: job.config.oauthClientId,
       clientSecret: job.config.clientSecret
     }
   }
